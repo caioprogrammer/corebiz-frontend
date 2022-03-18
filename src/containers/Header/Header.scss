@@ -1,0 +1,44 @@
+.header {
+    width: 100%;
+    padding: 16px 0;
+    color: #7A7A7A;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        img {
+            max-width: 170px;
+        }
+    }
+    &__search {
+        &--form {
+            position: relative;
+            img {
+                position: absolute;
+                right: 0;
+                top: 15px;
+            }
+            input {
+                border: 0;
+                border-bottom: 1px solid #7A7A7A;
+                width: 718px;
+                padding: 10px 0;
+                outline: none;
+            }
+        }
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 21px;
+        font-size: 13px;
+        &--customer {
+            gap: 6px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

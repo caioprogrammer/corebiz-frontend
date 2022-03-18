@@ -1,0 +1,95 @@
+.showcase {
+    &__title {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 27px;
+        color: #000000;
+        margin-bottom: 15px;
+    }
+    hr {
+        width: 65px;
+        height: 6px;
+        border: none;
+        background-color: #C0C0C0;
+        margin-bottom: 20px;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 430px;
+      }
+      
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+      
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+      
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        max-width: 960px;
+        height: 100%;
+        object-fit: cover;
+      }
+      .swiper-slide div {
+        width: unset;
+        background-color: unset;
+        color: unset;
+        height: unset;
+        text-align: unset;
+        position: unset;
+        display: unset;
+        flex-direction: unset;
+        align-items: unset;
+        justify-content: unset;
+        padding-right: unset;
+      }
+      .swiper-slide div img {
+          position: unset;
+          right: unset;
+          transform: unset;
+          height: unset;
+          width: unset;
+          bottom: unset;
+      }
+      .swiper-slide div span {
+        font-weight: unset;
+        font-size: unset;
+        line-height: unset;
+      }
+      .swiper-slide div h2 {
+        font-weight: 900;
+        font-size: 45px;
+        line-height: 45px;
+      }
+      .swiper-pagination-bullet {
+        width: 10px !important;
+        height: 10px !important;
+        text-align: center;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000;
+        opacity: 1;
+        background: #BDBDBD !important;
+      }
+      
+      .swiper-pagination-bullet-active {
+        color: #fff;
+        background: #F8475F !important;
+      }
+}
