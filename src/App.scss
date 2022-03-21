@@ -21,6 +21,9 @@
     .header__right--customer {
         display: none !important;
     }
+    .header__search--mobile {
+        display: block;
+    }
     .header__search--form.mobile {
         display: flex !important;
         width: 100%;
