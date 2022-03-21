@@ -35,4 +35,16 @@
             border-radius: 5px;
         }
     }
+    &__ok {
+        display: none;    
+    }
+    &__ok.active {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        color: #000;
+        button {
+            width: 165px;
+        }
+    }
 }

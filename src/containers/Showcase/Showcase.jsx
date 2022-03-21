@@ -30,21 +30,39 @@ const Showcase = () => {
       </h2>
       <hr />
       <div className='showcase__swiper'>
-        <Swiper slidesPerView={4} spaceBetween={30} loop={true} pagination={false} navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
+        <Swiper breakpoints={{
+          1024: {
+            slidesPerView: 4,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          600: {
+            slidesPerView: 2,
+          },
+          350: {
+            slidesPerView: 2,
+          },
+          120: {
+            slidesPerView: 1,
+          }
+
+        }} slidesPerView={4} spaceBetween={30} autoplay={true} loop={true} pagination={false} navigation={true} modules={[Pagination, Navigation]} className="mySwiper">
           {products.map((products, key) => {
+            const priceBefore = products.listPrice;
               return (
                 <SwiperSlide>
                   <div className='showcase__card' key={key}>
                     <img src={products.imageUrl} alt={products.productName}/>
                     <div className='showcase__card--content'>
                       <p>{products.productName}</p>
-                      <span>{products.stars}</span>
-                      {products.installments.forEach((item) => {
-                        console.log(item.quantity)
-                        console.log(item.value)
-                      })}
-                      <br />
-                      <h3>R$ {products.price.toLocaleString('pt-BR').replace('.', ',')}</h3>
+                      <span>{products.stars} stars</span>
+                      <h4>de R$ {priceBefore}</h4>
+                      <h3>por R$ {products.price.toLocaleString('pt-BR').replace('.', ',')}</h3>
+                      {/* {products.installments.forEach((item, key) => {
+                        return (<h4>{item}</h4>)
+                      } )} */}
+                      <button>COMPRAR</button>
                     </div>
                   </div>
                 </SwiperSlide>

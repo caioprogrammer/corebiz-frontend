@@ -5,11 +5,15 @@ import logo from '../../assets/logo-corebiz.png';
 import lupa from '../../assets/lupa.png';
 import customer from '../../assets/customer.png';
 import carrinho from '../../assets/carrinho.png'
+import menu from '../../assets/menu.svg';
 
 const Header = () => {
   return (
     <div className='header'>
       <div className='container'>
+        <div className='header__menu'>
+          <img src={menu} alt='menu'></img>
+        </div>
         <div className='header__logo'>
           <img src={logo} alt="logo"/>
         </div>
@@ -26,10 +30,18 @@ const Header = () => {
           </div>
           <div className='header__right--cart'>
             <img src={carrinho} alt="carrinho"/>
+            <span className='header__right--cart number'>
+              1
+            </span>
           </div>
         </div>
       </div>
-      
+      <div className='header__search--mobile container'>
+          <form className='header__search--form mobile'>
+            <input type="text" placeholder='O que está procurando?'/>
+            <img src={lupa} alt="lupa"/>
+          </form>
+      </div>
     </div>
   )
 }

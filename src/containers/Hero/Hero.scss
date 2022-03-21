@@ -41,8 +41,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
     padding-right: 15px;
+    justify-content: center;
+    @media screen and (max-width: 1024px) {
+      position: absolute;
+      background-color: rgba(0,0,0, .2);
+      align-items: center;
+      justify-content: center;
+    }
   }
   .swiper-slide div img {
       position: absolute;
@@ -52,15 +58,26 @@
       width: 430px;
       bottom: 155px;
   }
+  @media screen and (max-width:1024px) {
+    .wave {
+      display: none !important;
+    }
+  }
   .swiper-slide div span {
     font-weight: 700;
     font-size: 30px;
     line-height: 40px;
+    @media screen and (max-width: 1024px) {
+      max-width: 282px;
+    }
   }
   .swiper-slide div h2 {
     font-weight: 900;
     font-size: 45px;
     line-height: 45px;
+    @media screen and (max-width: 1024px) {
+      font-size: 30px;
+    }
   }
   .swiper-pagination-bullet {
     width: 10px !important;

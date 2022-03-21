@@ -40,5 +40,19 @@
             display: flex;
             align-items: center;
         }
+        &--cart {
+            position: relative;
+            .number {
+                position: absolute;
+                top: 0;
+                right: -15px;
+                background: #F8475F;
+                border-radius: 50%;
+                width: 14px;
+                height: 14px;
+                text-align: center;
+                color: white;
+            }
+        }
     }
 }
