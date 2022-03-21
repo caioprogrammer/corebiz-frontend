@@ -25,7 +25,7 @@ export default function Hero() {
           <div>
             <span>Olá o que você está buscando?</span>
             <h2>Criar ou migrar seu <br/> e-commerce?</h2>
-            <img class="wave" src={wave} alt="" />
+            <img className="wave" src={wave} alt="" />
           </div>
           <img src={banner1} alt=''/>
         </SwiperSlide>

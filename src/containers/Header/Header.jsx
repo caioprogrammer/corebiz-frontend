@@ -36,7 +36,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className='header__search--mobile container'>
+      <div className='header__search--mobile'>
           <form className='header__search--form mobile'>
             <input type="text" placeholder='O que está procurando?'/>
             <img src={lupa} alt="lupa"/>
