@@ -1,7 +1,7 @@
-import React  from 'react';
+import React from 'react';
 import './App.scss'
 import './index.scss';
-import './swiper';
+import './swiper.js';
 
 
 import {Header, Hero, Showcase, Footer} from './containers';

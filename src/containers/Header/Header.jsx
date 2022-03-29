@@ -30,8 +30,8 @@ const Header = () => {
           </div>
           <div className='header__right--cart'>
             <img src={carrinho} alt="carrinho"/>
-            <span className='header__right--cart number'>
-              1
+            <span id='quantity' className='header__right--cart number'>
+            0
             </span>
           </div>
         </div>

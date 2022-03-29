@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Showcase.scss';
 import axios from 'axios';
 
@@ -13,7 +13,15 @@ import { Pagination, Navigation } from "swiper";
 
 const Showcase = () => {
   const [products, setProducts] = useState([])
+  
+  let [count, setCount] = useState(0);
 
+  function incrementCount() {
+    count = count + 1;
+    setCount(count);
+    document.getElementById('quantity').innerText = count;
+  }
+  
   useEffect(() => {
     axios.get("https://corebiz-test.herokuapp.com/api/v1/products")
     .then((response) => {
@@ -59,10 +67,7 @@ const Showcase = () => {
                       <span>{products.stars} stars</span>
                       <h4>de R$ {priceBefore}</h4>
                       <h3>por R$ {products.price.toLocaleString('pt-BR').replace('.', ',')}</h3>
-                      {/* {products.installments.forEach((item, key) => {
-                        return (<h4>{item}</h4>)
-                      } )} */}
-                      <button>COMPRAR</button>
+                      <button onClick={incrementCount}>COMPRAR</button>
                     </div>
                   </div>
                 </SwiperSlide>
